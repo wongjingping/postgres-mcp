@@ -59,6 +59,16 @@ See [mcp.json](.cursor/mcp.json) for an example of how to add the server in Curs
 - **`list_tables`** - List all database tables
 - **`postgres://schema`** - Access complete database schema (resource)
 
+## Comparison with Official MCP Postgres Server
+
+This implementation differs from the official [@modelcontextprotocol/server-postgres](https://www.npmjs.com/package/@modelcontextprotocol/server-postgres) in several key ways:
+
+| Feature | This Server (Python) | Official Server (TypeScript) |
+|---------|---------------------|------------------------------|
+| **Safety** | Guards against SQL injection | No protection |
+| **Connection Pooling** | ✅ Built-in (asyncpg) | ❌ Single connection |
+
+
 ## Security
 
 - Only `SELECT` statements allowed
