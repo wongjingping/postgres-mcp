@@ -30,6 +30,8 @@ mcp dev main.py
 
 **MCP Client Integration**
 
+You can also add the following to your MCP client configuration to use the server:
+
 ```json
 {
   "mcpServers": {
@@ -48,6 +50,8 @@ mcp dev main.py
 }
 ```
 
+See [mcp.json](.cursor/mcp.json) for an example of how to add the server in Cursor IDE.
+
 ## Available Tools
 
 - **`query_database`** - Execute SELECT queries (with SQL injection protection)
@@ -60,3 +64,9 @@ mcp dev main.py
 - Only `SELECT` statements allowed
 - Parameterized queries supported
 - Environment-based configuration (no hardcoded credentials) 
+
+## Next Steps
+
+- [ ] Implement auth for postgres - currently I'm still relying on env variables which doesn't seem very secure
+- [ ] Extend this to run on multiple databases and potentially multiple postgres instances as well
+- [ ] Implement table / column pruning
